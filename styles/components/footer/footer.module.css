@@ -1,0 +1,11 @@
+
+.footer_section{
+
+    width: 100vw;
+    height: 10vh;
+
+    border-top: 2px solid black;
+
+    position: relative;
+    top: 100%;
+}

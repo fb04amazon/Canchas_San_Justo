@@ -1,0 +1,25 @@
+
+.Options{
+
+    width: fit-content;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    position: relative;
+    left: 2.5vw;
+    top: 15vh;
+
+}
+
+.Options button{
+
+    width: 10vw;
+    height: 5vh;
+
+    background-color: forestgreen;
+}
+

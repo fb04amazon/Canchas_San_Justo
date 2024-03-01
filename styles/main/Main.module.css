@@ -1,0 +1,32 @@
+.MainContainer{
+
+    width: 100vw;
+    height: max-content;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    position: relative;
+    top: 5vh;
+
+}
+
+.navOptions{
+    width: 100vw;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+
+}
+
+.navOptions button{
+    width: 33.33vw;
+    height: inherit;
+    text-align: center;
+}

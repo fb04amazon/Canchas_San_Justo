@@ -1,0 +1,78 @@
+.LoginContainer{
+    position: relative;
+    
+    width: 100vw;
+    height: max-content;
+}
+
+/*
+LOGIN
+*/
+
+.Login{
+    width: 70%;
+    height: max-content;
+
+    position: absolute;
+    left: 50%;
+    top: 35vh;
+
+    transform: translate(-50%, -50%);
+}
+
+.Login div{
+    width: 100%;
+    height: max-content;
+}
+
+.Login div h1{
+    position: relative;
+    left: 50%;
+    top: 20%;
+
+    transform: translate(-50%, -20%);
+
+    font-size: 5vw;
+    text-align: center;
+}
+
+.Login div form{
+    position: relative;
+    left: 50%;
+    top: 25%;
+
+    transform: translate(-50%, -25%);
+
+    height: max-content;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.Login div form input{
+    width: 40%;
+    height: 5vh;
+
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.Login div form button{
+    width: 40%;
+    height: 4vh;
+
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+

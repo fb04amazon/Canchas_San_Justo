@@ -1,0 +1,342 @@
+.CreateCourt_container{
+
+    position: relative;
+    width: 100vw;
+    height: max-content;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 10vh;
+}
+
+.CreateCourt{
+
+    position: relative;
+    width: 90vw;
+    height: max-content;
+
+    margin-top: 10vh;
+    background-color: rgb(151, 151, 151);
+}
+
+.CreateCourt h1{
+
+    position: absolute;
+    left: 5vw;
+    top: 2.5vh;
+}
+
+.CreateCourt .form1{
+
+    position: absolute;
+    top: 12vh;
+
+    width: inherit;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.CreateCourt .form1 input{
+    width: 30vw;
+    height: 5vh;
+    position: relative;
+    top: 2vh;
+    left: 8vw;
+
+}
+
+.CreateCourt .form1 select{
+    width: 30vw;
+    height: 5vh;
+}
+
+.CreateCourt .form1 textarea{
+    height: 10vh;
+}
+
+.btnContainer{
+    position: absolute;
+    top: 85%;
+    left: 70%;
+
+    width: 25vw;
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnContainer button{
+
+    width: 10vw;
+    height: 5vh;
+
+    background-color: chartreuse;
+}
+
+.progress{
+    position: absolute;
+    left: 50vw;
+    top: 2.5vh;
+
+    width: 40vw;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.progress button{
+    width: 20vw;
+    position: relative;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.progress li{
+    list-style: none;
+    height: inherit;
+    text-align: center;
+}
+
+
+/*
+    STEP 2
+*/
+
+.form2{
+
+    position: relative;
+    top: 20vh;
+
+    width: inherit;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    padding-bottom: 30vh;
+
+}
+
+.form2 .Courts{
+
+    position: relative;
+
+    width: inherit;
+    height: max-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 20vh;
+
+}
+
+.form2 .Courts .ImgDiv{
+
+    width: 45vw;
+    height: max-content;
+
+}
+
+.form2 .Courts .ImgDiv img{
+
+    position: relative;
+    left: 5vw;
+
+    width: 30vw;
+    height: 60vh;
+}
+
+.form2 .Courts .inputsDiv{
+
+    position: relative;
+    top: -10vh;
+
+    width: 45vw;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.form2 .Courts .inputsDiv div{
+
+    width: inherit;
+    height: 16vh;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form2 .Courts .inputsDiv div select{
+
+    width: 25vw;
+    height: 2.5vh;
+}
+
+.form2 .Courts .inputsDiv input{
+
+    width: 25vw;
+    height: 5vh;
+}
+
+.btnContainer2{
+
+    position: absolute;
+    top: 95%;
+    left: 70%;
+
+    width: 25vw;
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnContainer2 button{
+
+    width: 10vw;
+    height: 5vh;
+
+    background-color: chartreuse;
+}
+
+/*  Step 3  */
+
+.MediaData_Divs{
+
+    width: inherit;
+    height: max-content;
+
+    position: relative;
+    
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.MediaData_Divs h3{
+
+    position: relative;
+    left: 4%;
+
+}
+
+.mediaInputs_Container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.mediaInputs_Container div{
+
+    position: relative;
+
+    width: 40vw;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    border-style: dotted;
+
+    margin: 2vh 1vw 2vh 1vw;
+}
+
+.mediaInputs_Container div img{
+
+    width: 30vw;
+    height: 52vh;
+
+    position: relative;
+}
+
+.mediaInputs_Container div video{
+
+    width: 30vw;
+    height: 52vh;
+
+    position: relative;
+}
+
+/* step: finalizar */
+
+.LoaderContainer{
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    width: 90vw;
+    height: 60vh;
+
+    background-color: rgb(151, 151, 151);
+
+}
+
+.LoaderContainer .LoaderFunction{
+
+    position: absolute;
+    top: 10vh;
+    
+    width: inherit;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loader{
+
+    margin-top: 5vh;
+    
+    width: 25vw;
+    height: 5vh;
+    border-radius: 20px;
+    background:
+     repeating-linear-gradient(135deg,#f03355 0 10px,#ffa516 0 20px) 0/0%   no-repeat,
+     repeating-linear-gradient(135deg,#ddd    0 10px,#eee    0 20px) 0/100%;
+    animation: l3 2s infinite;
+}
+
+@keyframes l3 {
+    100% {background-size:100%}
+}

@@ -1,0 +1,60 @@
+.firstSection{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100vw;
+    height: 80vh;
+
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+
+    background-color: grey;
+
+}
+
+.title_paragraph_search{
+
+    height: 20vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    width: 30vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.title_paragraph_search .title_paragraph_search_child{
+
+    position: relative;
+    top: -10vh;
+
+    font-size: 1.5vw;
+}
+
+
+.title_paragraph_search .title_paragraph_search_input{
+
+    position: relative;
+    top: -10vh;
+
+    margin-top: 5vh;
+
+    height: 3vh;
+    width: 25vw;
+}
+
+.title_paragraph_search .title_paragraph_search_button{
+
+    position: relative;
+    top: -10vh;
+
+    margin-top: 5vh;
+
+    height: 3.8vh;
+}
