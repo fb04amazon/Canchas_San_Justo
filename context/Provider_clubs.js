@@ -9,7 +9,30 @@ const Provider_clubs = ({children}) => {
 
     const [Club_data, setClub_data] = useState();
     const [Club_Image, setClub_Image] = useState();
-    const [Court_club, setCourt_club] = useState([])
+    const [Court_club, setCourt_club] = useState([]);
+    const [ClubURL] = useState("http://127.0.0.1:8080/clubDB");
+    const [IsLogued, setIsLogued] = useState(true);
+
+    useEffect( () => {
+
+        if(IsLogued){
+
+            fetch( ClubURL + "/getClubs", {
+                method: "get"
+                
+            })
+            .then(async (res) => {
+                res.json().then( (res) => {
+                    
+                    setClub_data(res);
+                });
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        }
+
+    }, [])
 
     // funcion que pregunta y setea los datos del club del usuario
     const Ask_for_clubData = (value) => {

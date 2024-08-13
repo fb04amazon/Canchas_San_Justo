@@ -21,7 +21,7 @@ export default function MiClub(){
     const [clubURL] = useState("http://127.0.0.1:8080/clubDB/");
     const [courtURL] = useState("http://127.0.0.1:8080/CourtsDB/");
     const [Loading, setLoading] = useState(false);
-    const [SelectActivity, setSelectActivity] = useState("Noticias");
+    const [SelectActivity, setSelectActivity] = useState("Torneos");
     const [courts, setcourts] = useState(Court_club);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function MiClub(){
 
         if(clubData === undefined){
 
-        fetch(clubURL + "/getClub", {
+        fetch(clubURL + "getClub", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + JSON.stringify(localStorage.getItem("JWT"))
@@ -39,6 +39,8 @@ export default function MiClub(){
         .then(async (res) => {
         
             let response = await res.json();
+
+            console.log(response)
 
             Ask_for_clubData(response);
             setClub_data(response);
@@ -149,17 +151,11 @@ export default function MiClub(){
             setSelectActivity(e.target.textContent)
             
         }
-        else{
-            
-            
-            setSelectActivity("Noticias")
-
-        }
 
     }
 
 
-    if(Loading === true && SelectActivity === "Noticias"){
+    if(Loading === true && SelectActivity === "Torneos"){
 
         return(
 
@@ -190,7 +186,6 @@ export default function MiClub(){
                     <div className={Styles.Activity}>
 
                         <button onClick={showOptions}>Canchas</button>
-                        <button onClick={showOptions}>Noticias</button>
                         <button onClick={showOptions}>Torneos</button>
 
                     </div>
@@ -198,7 +193,6 @@ export default function MiClub(){
                     {SelectActivity === "Canchas" || SelectActivity === "Torneos" ? <Options props={SelectActivity}/> : <></>}
 
                     <div className={Styles.Content_Section}>
-
 
 
                     </div>
@@ -244,7 +238,6 @@ export default function MiClub(){
                     <div className={Styles.Activity}>
 
                         <button onClick={showOptions}>Canchas</button>
-                        <button onClick={showOptions}>Noticias</button>
                         <button onClick={showOptions}>Torneos</button>
 
                     </div>

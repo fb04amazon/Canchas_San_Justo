@@ -8,25 +8,115 @@
     flex-wrap: wrap;
 
     position: relative;
-    top: 5vh;
+    
+
+    background-color: #fbfbfb;
 
 }
 
-.navOptions{
+
+/* titulo del main */
+
+.Main_title{
     width: 100vw;
+    height: 80vh;
+    
+    background-image: url("../../public/images/ImagesForPage/soccer-ball-green-field-ready-game.jpg");
+    background-size: 100%;
+    background-position-y: 50%;
+
+    position: relative;
+
+}
+
+.Main_title h1{
+    color: coral;
+
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    top: 30%;
+    left: 5vw;
+
+    font-size: 2vw;
+}
+
+.Main_title #searchBtn{
+
+    position: absolute;
+    top: 45%;
+    left: 5.5vw;
+
+    width: 35vw;
     height: 5vh;
+
+   
+}
+
+/* Banner de paddle */
+
+.Banner{
+
+    width: 100vw;
+    height: 20vh;
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    
+    position: relative;
+
+    background-image: url("../../public/images/ImagesForPage/9342820.jpg");
+    background-size: cover;
+    
+}
+
+
+/* segundo div  (canchas) */
+
+.Main_CourtsDiv{
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+    background-color: rgb(36, 190, 28);
 
 }
 
-.navOptions button{
-    width: 33.33vw;
-    height: inherit;
-    text-align: center;
+.Main_CourtsDiv .paragraph_court{
+
+    position: relative;
+    width: 100%;
+    height: 10vh;
+
 }
+
+.Main_CourtsDiv .paragraph_court h2{
+
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+
+    font-size: larger;
+
+}
+
+.Main_CourtsDiv .paragraph_court p{
+
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%);
+
+    font-size: medium;
+
+    width: 30vw;
+}
+

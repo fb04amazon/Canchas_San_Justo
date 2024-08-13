@@ -1,9 +1,8 @@
 
-import { useState, useEffect, useContext } from "react";
-import { Products_Context } from "../context/Provider_products.js";
-import { User_Context } from "../context/Provider_user.js";
+import { useState, useEffect} from "react";
 
 import Navigation from "../components/nav.js";
+import Footer from "../components/footer.js"
 import CourtList_container from "../components/CourtList_container.js";
 
 import Styles from "../styles/main/Main.module.css"
@@ -11,50 +10,54 @@ import Styles from "../styles/main/Main.module.css"
 
 export default function Main (){
 
-    const contexto_Products = useContext(Products_Context);
-    const contexto_user = useContext(User_Context);
-
-    const {User, Ask_For_Logging_user} = contexto_user
-    const {Courts, Ask_For_Logging_products} = contexto_Products
-
     const [loading, setLoading] = useState(false);
-    
+   
     useEffect(() => {
 
-        Ask_For_Logging_products(true);
-        Ask_For_Logging_user(true);
-  
-        setTimeout(() => {
-            setLoading(true);
-        }, 500);    
+      setTimeout(() => {
+        setLoading(true)
+      }, 2000);
             
-    }, [])
+    }, [loading]);
+
 
     if(loading){
 
         return(
-        <>
-            <Navigation is_owner={User.typeUser}/>
+        <section className={Styles.MainContainer}>
+            
+            <article className={Styles.Main_title}>
+                
+                <Navigation/>
 
-            <article className={Styles.navOptions}>
-                <button>
-                    Canchas
-                </button>
-                <button>
-                    Anuncios
-                </button>
-                <button>
-                    Clubes
-                </button>
+                <h1>Encontra la cancha que estas buscando</h1>
+                
+                <button id={Styles.searchBtn}>Buscar canchas</button>
+                
             </article>
 
-            <section className={Styles.MainContainer}>
-                
-                <CourtList_container props={Courts} />
+            <article className={Styles.Banner}>
+
+            </article>
+
+            <section className={Styles.Main_CourtsDiv}>      
+
+                    <article className={Styles.paragraph_court}>
+
+                        <h2>Estas son algunas de las canchas que estan disponibles</h2>
+
+                        <p>Cada cancha puede ser reservada para cualquier dia de la semana</p>
+                        
+
+                    </article>
+
+                    <CourtList_container host={"main"}/>
 
             </section>
+
+            <Footer/>
         
-        </>
+        </section>
         )
     }
     else{

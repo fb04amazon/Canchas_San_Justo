@@ -11,7 +11,7 @@ const Provider_products = ({children}) => {
     const [Courts, setCourts] = useState();
     const [images] = useState([]);
     const [CourtsURL] = useState("http://127.0.0.1:8080/CourtsDB");
-    const [IsLogued, setIsLogued] = useState(false);
+    const [IsLogued, setIsLogued] = useState(true);
 
     // METODO PARA LLAMAR A PRODUCTOS, TRAE LAS CANCHAS (productos) Y CONVIERTE EN URL A LOS BLOB DE LAS IMAGENES
     useEffect(() => {
@@ -29,23 +29,25 @@ const Provider_products = ({children}) => {
         .then((res) => {
             
             res.json().then((res)=>{
-                console.log(res);
-                setCourts(res);
-
+                
                 res.map( (element) => {
 
-                    element.Thumbnail.map( async (image) => {
+                    element.media.map( async (res) => {
         
-                        const products = await fetch(CourtsURL + "/sendFiles/products/" + image.name)
+                        const products = await fetch(CourtsURL + "/sendFiles/" + element.club_owner + "/" + element.title + "/" + res.type + "/" + res.name);
         
                         products.blob()
                         
                         .then(blob => {
-                            images.push({src: URL.createObjectURL(blob)})
+                            res.blob = URL.createObjectURL(blob);
                         })
         
                     })
                 })
+
+                setCourts(res);
+                console.log(res);
+
             })  
         })
         .catch((err) => {
@@ -53,6 +55,8 @@ const Provider_products = ({children}) => {
         })
 
         }
+
+        
 
     }, [IsLogued])
 

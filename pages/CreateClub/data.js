@@ -7,6 +7,8 @@ import Styles from "../../styles/createClub/data.module.css"
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+import {Ask_user} from "../../context/Provider_user.js";
+
 export default function Profile(){
 
     const router = useRouter()
@@ -91,6 +93,45 @@ export default function Profile(){
                 console.log(res);
             })
             .catch((err) => {
+                console.log(err);
+            })
+
+
+            await fetch("http://127.0.0.1:8080/userDB/cookies/set_cookies", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + JSON.stringify(localStorage.getItem("JWT")),
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({username: user.username})
+            })
+            .then(async (res) => {
+                console.log(res);
+                let token = await res.json();
+
+                localStorage.setItem("JWT", token);
+
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+            await fetch( "http://127.0.0.1:8080/userDB" + "/current", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + JSON.stringify(localStorage.getItem("JWT"))
+                }
+            })
+            .then( async (res) => {
+                await res.json().then( (user) => {
+                    console.log(user);
+
+                    localStorage.setItem("TypeUser", user.typeUser)
+
+                    Ask_user(user);
+                })
+            })
+            .catch( (err) => {
                 console.log(err);
             })
 

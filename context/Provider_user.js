@@ -9,12 +9,13 @@ const { Provider } = User_Context;
 const Provider_user = ({children}) => {
 
     const [User, setUser] = useState();
+    const [Ask_user, setAsk_user] = useState();
     const [UserURL] = useState("http://127.0.0.1:8080/userDB");
     const [IsLogued, setIsLogued] = useState(false);
 
     useEffect(() => {
 
-        if(IsLogued){
+        if(localStorage.getItem("TypeUser") === null){
 
             fetch( UserURL + "/current", {
                 method: "GET",
@@ -25,7 +26,10 @@ const Provider_user = ({children}) => {
             .then( (res) => {
                 res.json().then( (user) => {
                     console.log(user);
-                    setUser(user)
+
+                    localStorage.setItem("TypeUser", user.typeUser);
+
+                    setUser(user);
                 } )
             })
             .catch( (err) => {
@@ -45,11 +49,15 @@ const Provider_user = ({children}) => {
 
     }
 
+    const Handle_Ask_user = (value) => {
+        setAsk_user(value);
+    }
+
     const contextValue = {
 
         User,
-        Ask_For_Logging_user
-
+        Ask_For_Logging_user,
+        Ask_user
     }
 
     return(

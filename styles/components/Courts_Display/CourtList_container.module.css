@@ -1,60 +1,36 @@
-.CourtContainer{
+
+
+/* MAIN: estilos hechos para la pestaña de main donde se mostraran algunas canchas */
+
+.CourtContainer_main{
+    
+    position: relative;
+    top: 20vh;
+
+    width: 100vw;
+    height: max-content;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    
-    height: 30vh;
-    width: 70vw;
-
-    margin-left: 4vw;
-    margin-right: 4vw;
-
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
-
-    border: 1px solid black;
-
+    justify-content: space-around;
 }
 
-.images{
+.CourtContainer{
 
-    width: 25vw;
-    height: 30vh;
-}
+    width: 30vw;
+    height: 50vh;
 
-.CourtContainer .CourtInfo{
-
-    width: 25vw;
-    height: inherit;
-
-    margin-left: 2vw;
+    border: 2px solid rgb(150, 150, 150);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
 }
 
-.CourtContainer .CourtInfo h3{
+.CourtContainer img{
 
-    width: 20vw;
-    font-size: 3vh;
-
+    width: inherit;
+    height: 30vh;
 }
-
-.CourtContainer .CourtInfo div{
-
-    width: 20vw;
-    height: 5vh;
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-.CourtContainer .CourtInfo div img{
-
-    width: 4vw;
-    height: 5vh;
-}
-

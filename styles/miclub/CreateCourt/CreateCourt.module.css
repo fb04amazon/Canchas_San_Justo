@@ -190,6 +190,20 @@
     align-items: center;
 }
 
+.form2 .inputsDiv .schedules{
+
+    position: relative;
+    top: -5vh;
+}
+
+.form2 .inputsDiv .time_schedule{
+
+    position: relative;
+
+    top: 10vh;
+
+}
+
 .form2 .Courts .inputsDiv div select{
 
     width: 25vw;

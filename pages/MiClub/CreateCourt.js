@@ -174,7 +174,7 @@ export default function CreateCourt(){
 
             //el primer fetch crea la cancha 
 
-            await fetch(CourtURL + "Post_dbproduct/" + Club_data._id, {
+            await fetch(CourtURL + "Post_dbproduct/" + Club_data.owner, {
                 method: "POST",
                 headers:{
                     "Authorization": "Bearer " + localStorage.getItem("JWT"),
@@ -189,7 +189,7 @@ export default function CreateCourt(){
             // trae la cancha correspondiente
             let courtId;
 
-            await fetch(CourtURL + "Get_dbproduct/" + Club_data._id + "/" + CourtFinalData.title, {
+            await fetch(CourtURL + "Get_dbproduct/" + Club_data.owner + "/" + CourtFinalData.title, {
                 method: "GET",
                 headers:{
                     "Authorization": "Bearer " + JSON.stringify(localStorage.getItem("JWT")),
@@ -451,11 +451,12 @@ export default function CreateCourt(){
                         </div> 
                         
                         <br />
-                            <div>
+                            <div className={Styles.time_schedule}>
                                 <label />Duracion de turno
                                 <input type="time" placeholder="hs" id="courtTime" onChange={HandleCourtsInput}/>
                             </div>
                         <br />
+
                             <div>
                                 <label /> Superficie de terreno
                                 <Surface id={"surface" + index}/>

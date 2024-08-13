@@ -25,9 +25,12 @@ export default function Options({props}){
         return(
             <>
                 <section className={Styles.Options}>
-                    <button>
+                    <Link href="/MiClub/CreateTournament">
+                      <button>
                         Crear torneo
                     </button>
+                    </Link>
+                  
                     <button>
                         Borrar
                     </button>
